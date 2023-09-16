@@ -1,0 +1,40 @@
+NewUser:
+  type: object
+  properties:
+    username:
+      type: string
+    password:
+      type: string
+
+User:
+  type: object
+  properties:
+    id:
+      type: integer
+    username:
+      type: string
+
+NewTodo:
+  type: object
+  properties:
+    title:
+      type: string
+    description:
+      type: string
+
+Todo:
+  type: object
+  properties:
+    id:
+      type: integer
+    title:
+      type: string
+    description:
+      type: string
+    completed:
+      type: boolean
+
+TodoList:
+  type: array
+  items:
+    $ref: '#/Todo'

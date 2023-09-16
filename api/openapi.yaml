@@ -1,0 +1,13 @@
+openapi: 2.0.0
+info:
+  title: TODOリスト_API
+  version: 1.0.0
+
+paths:
+  /todos:
+    $ref: './paths/todos.yaml'
+  /users:
+    $ref: './paths/users.yaml'
+
+components:
+  $ref: './components/schemas.yaml'

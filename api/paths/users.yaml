@@ -1,0 +1,20 @@
+post:
+  summary: ユーザーを作成
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas.yaml#/NewUser'
+  responses:
+    '201':
+      description: ユーザーが作成された
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/User'
+    '400':
+      description: 不正なリクエスト
+    '409':
+      description: すでに存在するユーザー名
+    '500':
+      description: サーバーエラー

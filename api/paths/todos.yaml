@@ -1,0 +1,33 @@
+get:
+  summary: 今日のTODOリストを取得
+  responses:
+    '200':
+      description: 成功
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/TodoList'
+    '401':
+      description: 認証に失敗しました
+    '500':
+      description: サーバーエラー
+post:
+  summary: 新しいTODOを追加
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../components/schemas.yaml#/NewTodo'
+  responses:
+    '201':
+      description: TODOが作成されました
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas.yaml#/Todo'
+    '400':
+      description: 不正なリクエストです
+    '401':
+      description: 認証に失敗しました
+    '500':
+      description: サーバーエラー
